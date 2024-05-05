@@ -63,7 +63,9 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 logger.addHandler(fh)
 
 def main() -> None:
+
 #new addition
+
     application = Application.builder().token("TOKEN").build()
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help_command))
